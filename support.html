@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Visiting Judges Case Manager Support</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+<body>
+<style>
+  :root {
+    --paper: #F4F2EC; --card: #FFFFFF; --ink: #1A2230; --muted: #56627A; --navy: #22406A;
+    --brass: #8C6A2C; --rule: #DDD8CC;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0E1420; --card: #151D2C; --ink: #E6EAF1; --muted: #A3AEC0; --navy: #9DB8E0;
+      --brass: #D4B274; --rule: #283347;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0E1420; --card: #151D2C; --ink: #E6EAF1; --muted: #A3AEC0; --navy: #9DB8E0;
+    --brass: #D4B274; --rule: #283347;
+  }
+  body {
+    background: var(--paper); color: var(--ink);
+    font: 1rem/1.65 system-ui, -apple-system, "Segoe UI", sans-serif;
+    margin: 0; padding: 0 20px 80px;
+  }
+  main { max-width: 44rem; margin: 0 auto; }
+  .top { padding: 28px 0 0; font-size: 0.95rem; }
+  .top a { color: var(--muted); text-decoration: none; }
+  h1 { font-family: Georgia, "Iowan Old Style", "Times New Roman", serif; font-size: 1.9rem; margin: 28px 0 4px; text-wrap: balance; }
+  .meta { color: var(--muted); font-size: 0.95rem; margin: 0 0 28px; }
+  h2 {
+    font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--brass); margin: 40px 0 4px; padding-top: 16px; border-top: 1px solid var(--rule);
+  }
+  details { border-bottom: 1px dotted var(--rule); padding: 4px 0; }
+  summary { cursor: pointer; font-weight: 650; font-size: 1.02rem; padding: 10px 0; }
+  summary:hover { color: var(--navy); }
+  details p { color: var(--muted); max-width: 64ch; margin: 4px 0 14px; }
+  details strong { color: var(--ink); }
+  a { color: var(--navy); }
+  .contact {
+    border-left: 4px solid var(--brass); border-radius: 4px;
+    padding: 10px 16px; margin: 36px 0 0;
+    background: color-mix(in srgb, var(--brass) 9%, transparent);
+  }
+  .contact p { margin: 6px 0; max-width: 64ch; }
+  .foot { color: var(--muted); font-size: 0.9rem; margin: 28px 0 0; }
+</style>
+<main>
+  <nav class="top"><a href="./">&larr; Visiting Judges Case Manager</a></nav>
+  <h1>Visiting Judges Case Manager — Support</h1>
+  <p class="meta">Answers to the questions that come up, roughly in the order they come up.
+  Anything not covered here: <a href="mailto:jwsimoneaux@gmail.com">jwsimoneaux@gmail.com</a>.</p>
+
+  <h2>Getting started</h2>
+
+  <details>
+    <summary>What does the app do?</summary>
+    <p>It keeps every assignment you sit on in one place: the order of assignment, the
+    documents, hearings and travel, a pending list, notes, your time, and your expenses. From
+    those it prepares the statement of time and expenses for each case, addressed to the judge
+    who assigned you, and tracks it from submitted to paid. It is built for Texas judges sitting
+    by assignment and runs on iPhone and iPad.</p>
+  </details>
+
+  <details>
+    <summary>What should I set up first?</summary>
+    <p>The first screens ask who you are, how you are paid, where your mileage starts, and who
+    usually assigns you. Then add your first assignment: the cause, the court, the county seat,
+    and the order of assignment, including the <strong>kind of assignment</strong>. That one
+    choice sets how your time is counted and which statutes your statements cite. You can start
+    with an invented sample case to look around, and remove it in Settings when you&rsquo;re ready.</p>
+  </details>
+
+  <details>
+    <summary>Why must I use Face ID or a passcode?</summary>
+    <p>Because the app holds court records. It locks every time it opens and again after a
+    minute in the background. The check is done by iOS; the app never sees your face data or
+    passcode.</p>
+  </details>
+
+  <h2>Assignments and pay</h2>
+
+  <details>
+    <summary>Which kinds of assignment does it handle?</summary>
+    <p>Five, each with its own statute: a <strong>regional assignment</strong> by one of the
+    eleven presiding judges of the administrative judicial regions (Tex. Gov&rsquo;t Code
+    § 74.056); a <strong>statutory probate court</strong> assignment by the presiding judge of the
+    statutory probate courts (§ 25.0022(h)); a <strong>county court probate, guardianship, or mental
+    health matter</strong> (§§ 26.012, 25.0022(h)); a visiting judge <strong>appointed by the county
+    judge</strong> (§§ 26.023, 26.026); and a <strong>temporary justice of the peace</strong>
+    (§ 27.055(b)). For anything else, choose Other and type the authority your order cites.</p>
+  </details>
+
+  <details>
+    <summary>Why is my time in days on one case and hours on another?</summary>
+    <p>Because the statutes differ. Under Chapter 74, sitting more than half a day is a full
+    day and half a day or less is a half day (§ 74.061(j)); the app counts each date once.
+    Section 25.0022 has no half-day rule, and the statutory probate courts&rsquo; report form asks
+    for actual hours, in person and remote, so a statutory probate case is always in hours: a
+    15-minute review of a motion is 0.25 hour, not a half day.</p>
+  </details>
+
+  <details>
+    <summary>What does a statutory probate statement look like?</summary>
+    <p>It follows the Assigned Statutory Probate Judge&rsquo;s Report: the assignment, total hours
+    worked in person and remotely, the days with in-person service, the expense lines, and the
+    form&rsquo;s certification, followed by a sheet of hours and dates and the itemized expenses
+    with receipts. It claims no dollar amount for time, because the presiding judge determines
+    the salary.</p>
+  </details>
+
+  <details>
+    <summary>How is mileage figured?</summary>
+    <p>Round trip from the origin you set, at the rate in effect on the date of travel:
+    $0.725 a mile from January 1, 2026, the rate the Office of Court Administration uses. Past
+    years&rsquo; rates are built in, and you can change a rate in Settings if your assigning judge
+    uses another. Lodging, meals, and other expenses are claimed at actual cost, with receipts
+    attached to the statement.</p>
+  </details>
+
+  <details>
+    <summary>What about the $25 per diem, or a statutory county court?</summary>
+    <p>Log the per diem as its own expense; a past in-person hearing offers <strong>Log per diem</strong> once you set your per diem in Settings.
+    Chapter 74 pays it for each day or fraction of a day outside your district or county
+    (§ 74.061(f)); § 25.0022(p) provides the same for statutory probate assignments. For an
+    assignment to a statutory county court, turn off <strong>Time is compensated for this
+    assignment</strong> on the case: the State pays no compensation for that sitting (§ 74.061(k)), so your time is listed
+    for the record while your expenses are still claimed.</p>
+  </details>
+
+  <details>
+    <summary>Where do the explanations and citations come from?</summary>
+    <p>Tap any <strong>ⓘ</strong> for the rule in plain words and the statute behind it. They
+    summarize the Government Code as current on January 1, 2026, and the Office of Court
+    Administration&rsquo;s travel guidance. They are not legal advice, and your assigning judge&rsquo;s
+    own procedures govern the paperwork.</p>
+  </details>
+
+  <h2>Statements</h2>
+
+  <details>
+    <summary>Who receives my statement?</summary>
+    <p>The judge who assigned the case, chosen on each case: any of the eleven regional presiding
+    judges, the presiding judge of the statutory probate courts, or someone you type in, such as
+    a county judge. Names and addresses come from the Office of Court Administration&rsquo;s
+    published list and can be corrected on the case if an office changes.</p>
+  </details>
+
+  <details>
+    <summary>How do I send one, and how do I keep track?</summary>
+    <p>Open <strong>Prepare statement</strong> on the case. Review it, then print or save the
+    PDF, or email it with the receipts attached. Mark it submitted when you send it: its entries
+    lock, so nothing is ever claimed twice, and the next statement starts fresh. Mark it
+    forwarded for payment and paid as it moves along; Time &amp; Statements shows where every
+    statement stands.</p>
+  </details>
+
+  <h2>Your records</h2>
+
+  <details>
+    <summary>Where is my data? Is there an account?</summary>
+    <p>No account and no server of ours. Everything lives on your device and nothing reaches us.
+    See the <a href="privacy.html">privacy policy</a>, which is short because there is little
+    to disclose.</p>
+  </details>
+
+  <details>
+    <summary>How do I back up, or move to a new iPad?</summary>
+    <p>In Settings, <strong>Back up with documents</strong> writes everything to one file that
+    you save where you like: Files, iCloud Drive, Google Drive, or email. On the new device,
+    choose <strong>Restore from a backup</strong> when the app first opens, or
+    <strong>Restore</strong> in Settings later.
+    Restoring merges with what is already there, so you can also use a backup to bring an
+    iPhone and an iPad into agreement. A device backup or Apple&rsquo;s Quick Start also carries the
+    app&rsquo;s data to a new device.</p>
+  </details>
+
+  <details>
+    <summary>Can I use larger text?</summary>
+    <p>Yes. The app follows the text size set in Settings → Accessibility → Display &amp; Text
+    Size. At larger sizes, the iPad switches to the single-column layout so nothing is
+    squeezed.</p>
+  </details>
+
+  <h2>Subscription</h2>
+
+  <details>
+    <summary>What does it cost?</summary>
+    <p>The download is free. A subscription is <strong>$14.99 for the first year</strong>, then
+    <strong>$49.99 a year</strong>. It renews automatically unless you turn it off at least 24
+    hours before the renewal date. Payment is charged to your Apple Account.</p>
+  </details>
+
+  <details>
+    <summary>Why a subscription?</summary>
+    <p>Because the rules change. The Legislature amends the statutes, the mileage rate changes
+    each January, and presiding judges and their offices change. The subscription pays for
+    keeping the app&rsquo;s rules, rates, directory, and explanations current.</p>
+  </details>
+
+  <details>
+    <summary>How do I cancel, or restore a purchase on a new device?</summary>
+    <p>Cancel any time in Settings → your name → Subscriptions on your iPhone or iPad. To use
+    your subscription on another device signed into the same Apple Account, tap
+    <strong>Restore purchases</strong> in the app&rsquo;s Settings.</p>
+  </details>
+
+  <details>
+    <summary>What happens if my subscription ends?</summary>
+    <p>Your records stay yours. The app becomes read-only: you can open every case, print past
+    statements, and back up or export everything, but you can&rsquo;t add or change anything until
+    you renew.</p>
+  </details>
+
+  <div class="contact">
+    <p><strong>Still stuck, or found a rule or a figure that doesn&rsquo;t look right?</strong>
+    Write to <a href="mailto:jwsimoneaux@gmail.com">jwsimoneaux@gmail.com</a> with what you
+    saw and what you expected. Reports of a changed statute or a changed office address are
+    especially welcome.</p>
+  </div>
+
+  <p class="foot">Visiting Judges Case Manager is not affiliated with or endorsed by the Office of
+  Court Administration, the Administrative Judicial Regions, or the Statutory Probate Courts of
+  Texas. Its explanations are not legal advice.</p>
+  <p class="foot">&copy; 2026 Jerry W. Simoneaux, Jr. · <a href="mailto:jwsimoneaux@gmail.com">jwsimoneaux@gmail.com</a> · <a href="privacy.html">Privacy</a></p>
+</main>
+</body>
+</html>

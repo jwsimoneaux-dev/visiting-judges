@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Visiting Judges Case Manager</title>
+  <meta name="description" content="The case tracker and statement preparer for Texas judges sitting by assignment: orders, documents, hearings and travel, time, expenses, and statements that cite the right statute." />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+<body>
+<style>
+  :root {
+    --paper: #F4F2EC; --card: #FFFFFF; --ink: #1A2230; --muted: #56627A; --navy: #22406A;
+    --night: #1B2A41; --brass: #8C6A2C; --gold: #D4B274; --rule: #DDD8CC;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0E1420; --card: #151D2C; --ink: #E6EAF1; --muted: #A3AEC0; --navy: #9DB8E0;
+      --night: #0A0F18; --brass: #D4B274; --rule: #283347;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0E1420; --card: #151D2C; --ink: #E6EAF1; --muted: #A3AEC0; --navy: #9DB8E0;
+    --night: #0A0F18; --brass: #D4B274; --rule: #283347;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--paper); color: var(--ink);
+    font: 1rem/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; margin: 0;
+  }
+  a { color: var(--navy); }
+  .serif, h1, h2, h3 { font-family: Georgia, "Iowan Old Style", "Times New Roman", serif; text-wrap: balance; }
+  .wrap { max-width: 64rem; margin: 0 auto; padding: 0 22px; }
+
+  header.hero { background: linear-gradient(180deg, #2A4A77 0%, var(--night) 100%); color: #fff; padding: 56px 0 60px; }
+  .hero .wrap { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; }
+  .hero img { width: 112px; height: 112px; border-radius: 26px; box-shadow: 0 10px 30px rgba(0,0,0,.35); flex: none; }
+  .hero .text { flex: 1 1 22rem; }
+  .hero .eyebrow { color: var(--gold); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin: 0 0 6px; }
+  .hero h1 { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.12; margin: 0; }
+  .hero p.sub { font-size: 1.15rem; color: #D6DEEA; max-width: 40rem; margin: 14px 0 0; }
+  .hero .cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 22px; align-items: center; }
+  .pill { display: inline-block; border: 1px solid rgba(212,178,116,.7); color: var(--gold); border-radius: 999px; padding: 7px 16px; font-weight: 600; font-size: 0.95rem; }
+  .hero .cta a { color: #fff; }
+
+  section { padding: 46px 0 6px; }
+  h2 { font-size: 1.7rem; margin: 0 0 8px; }
+  .lede { color: var(--muted); max-width: 44rem; margin: 0 0 22px; font-size: 1.05rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr)); gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--rule); border-radius: 14px; padding: 18px 18px 14px; }
+  .card h3 { font-size: 1.12rem; margin: 0 0 6px; }
+  .card p { margin: 0 0 6px; color: var(--muted); }
+  .cite { font-size: 0.86rem; color: var(--brass); font-style: italic; }
+
+  table.kinds { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--rule); border-radius: 14px; overflow: hidden; }
+  .kinds th, .kinds td { text-align: left; padding: 11px 14px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  .kinds th { font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+  .kinds tr:last-child td { border-bottom: 0; }
+  .kinds td:first-child { font-weight: 650; }
+  .scroll { overflow-x: auto; }
+
+  .price { background: var(--card); border: 1px solid var(--rule); border-left: 5px solid var(--brass); border-radius: 14px; padding: 22px; display: flex; gap: 28px; flex-wrap: wrap; align-items: center; }
+  .price .big { font-family: Georgia, serif; font-size: 2.4rem; font-weight: 700; line-height: 1; }
+  .price .then { color: var(--muted); margin-top: 6px; }
+  .price p { margin: 6px 0; max-width: 36rem; }
+
+  footer { margin-top: 56px; border-top: 1px solid var(--rule); padding: 22px 0 60px; color: var(--muted); font-size: 0.92rem; }
+  footer p { margin: 6px 0; max-width: 60rem; }
+</style>
+
+<header class="hero">
+  <div class="wrap">
+    <img src="apple-touch-icon.png" alt="" />
+    <div class="text">
+      <p class="eyebrow">For Texas judges sitting by assignment</p>
+      <h1>Visiting Judges Case Manager</h1>
+      <p class="sub">Every assignment in one place: the order, the documents, the hearings and the
+      drive, your time and expenses. Then the statement, prepared for the judge who assigned
+      you, citing the statute that governs it.</p>
+      <div class="cta">
+        <span class="pill">Coming soon to the App Store · iPhone &amp; iPad</span>
+        <a href="support.html">Questions &amp; answers</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section>
+    <h2>Everything a visiting judge keeps</h2>
+    <p class="lede">Built around how assignments actually run: an order from a presiding judge, a
+    courthouse a few hours away, and a statement that has to be right.</p>
+    <div class="grid">
+      <div class="card"><h3>The order of assignment</h3><p>The cause, the court, the judge you sit for, the scope, and the authority. Limited-scope orders are flagged everywhere the case appears.</p></div>
+      <div class="card"><h3>Documents</h3><p>Import PDFs or photograph a page. Files are named by date and title, the way chambers files them, and read right in the app.</p></div>
+      <div class="card"><h3>Hearings and travel</h3><p>A month calendar with travel days, lodging, and the round trip, sent to the calendar you already use. A final order that must be signed in the county seat is flagged on the hearing.</p></div>
+      <div class="card"><h3>Pending</h3><p>What is waiting on you, by due date, across every case, with overdue items flagged.</p></div>
+      <div class="card"><h3>Time</h3><p>Full and half days where Chapter 74 counts days; actual hours, in person and remote, where the statutory probate courts ask for hours.</p></div>
+      <div class="card"><h3>Expenses</h3><p>Mileage from your own starting point at the rate in effect on the date of travel, with meals, lodging, and the per diem, and a receipt for each.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Statements that cite the right statute</h2>
+    <p class="lede">Choose the kind of assignment once. The app counts your time the way that
+    statute does, names who pays what, and cites the subsection behind each line. Tap any ⓘ in
+    the app for the rule in plain words.</p>
+    <div class="scroll">
+      <table class="kinds">
+        <thead><tr><th>Kind of assignment</th><th>How time counts</th><th>Authority</th></tr></thead>
+        <tbody>
+          <tr><td>Regional assignment</td><td>Full day; half a day or less is a half day</td><td>Tex. Gov&rsquo;t Code §§ 74.056, 74.061</td></tr>
+          <tr><td>Statutory probate court</td><td>Actual hours, in person and remote, on the presiding judge&rsquo;s report form</td><td>§ 25.0022</td></tr>
+          <tr><td>County court probate, guardianship, or mental health matter</td><td>As for statutory probate</td><td>§§ 26.012, 25.0022(h)</td></tr>
+          <tr><td>Appointed by the county judge</td><td>Each day the judge sits</td><td>§§ 26.023, 26.026</td></tr>
+          <tr><td>Temporary justice of the peace</td><td>As the commissioners court sets</td><td>§ 27.055(b)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="grid" style="margin-top:14px">
+      <div class="card"><h3>Addressed to the right office</h3><p>All eleven regional presiding judges and the presiding judge of the statutory probate courts are built in, with their administrators&rsquo; addresses and email, or type in a county judge.</p></div>
+      <div class="card"><h3>Never claimed twice</h3><p>Submitting a statement locks its entries, and the next one starts fresh. Track each from submitted to forwarded to paid.</p></div>
+      <div class="card"><h3>Receipts attached</h3><p>Print, save a PDF, or email the statement with its receipts numbered as exhibits.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Private by design</h2>
+    <p class="lede">Your cases never leave your iPhone or iPad unless you send them. There is no
+    account, no server, no analytics, and no tracking. Face ID or a passcode guards the app, and a
+    single backup file, saved wherever you choose, carries everything to a new device.
+    <a href="privacy.html">Read the privacy policy.</a></p>
+  </section>
+
+  <section>
+    <h2>Price</h2>
+    <div class="price">
+      <div>
+        <div class="big">$14.99</div>
+        <div class="then">the first year, then $49.99 a year</div>
+      </div>
+      <div>
+        <p>A free download with an annual subscription, billed through the App Store. Cancel any
+        time in your Apple Account settings.</p>
+        <p>Why a subscription: statutes are amended, the mileage rate changes every January, and
+        presiding judges and their offices change. The subscription keeps the rules, rates,
+        directory, and explanations current. If it ever lapses, your records stay yours:
+        read-only, printable, and exportable.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="support.html">Support</a> · <a href="privacy.html">Privacy policy</a> · <a href="mailto:jwsimoneaux@gmail.com">jwsimoneaux@gmail.com</a></p>
+    <p>Visiting Judges Case Manager is not affiliated with or endorsed by the Office of Court
+    Administration, the Administrative Judicial Regions, or the Statutory Probate Courts of Texas.
+    Its explanations summarize the Government Code and are not legal advice.</p>
+    <p>&copy; 2026 Jerry W. Simoneaux, Jr.</p>
+  </div>
+</footer>
+</body>
+</html>
