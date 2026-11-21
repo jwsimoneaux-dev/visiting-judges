@@ -67,7 +67,15 @@
     time, and your expenses. From
     those it prepares the statement of time and expenses for each case, addressed to the judge
     who assigned you, and tracks it from submitted to paid. It is built for Texas judges sitting
-    by assignment and runs on iPhone and iPad.</p>
+    by assignment and runs on Windows 10 and 11.</p>
+  </details>
+
+  <details>
+    <summary>How do I install it?</summary>
+    <p><a href="https://github.com/jwsimoneaux-dev/visiting-judges/releases/latest">Download</a> the installer (the .exe file) and run it. It installs for your
+    own Windows account, with no administrator rights needed. Windows may say it protected your PC
+    from an unrecognized app: choose <strong>More info</strong>, then <strong>Run anyway</strong>.
+    If your county manages your PC and the installer is blocked, ask its IT staff to allow it.</p>
   </details>
 
   <details>
@@ -80,10 +88,28 @@
   </details>
 
   <details>
-    <summary>Why must I use Face ID or a passcode?</summary>
-    <p>Because the app holds court records. It locks every time it opens and again after a
-    minute in the background. The check is done by iOS; the app never sees your face data or
-    passcode.</p>
+    <summary>Why must I unlock it every time?</summary>
+    <p>Because it holds court records. It locks each time it opens, after a minute away, and
+    whenever Windows locks or sleeps. It uses Windows Hello (face, fingerprint, or your Windows
+    PIN) when your PC has it set up; otherwise it asks for a PIN of its own, 6 to 12 digits, which
+    you choose the first time it opens.</p>
+  </details>
+
+  <details>
+    <summary>I forgot the program&rsquo;s PIN. What now?</summary>
+    <p>The PIN cannot be recovered, because the program keeps only a scrambled form of it, but it
+    can be reset without losing anything. Quit the program (right-click its icon in the tray by the
+    clock and choose <strong>Quit</strong>). Press <strong>Windows key + R</strong>, enter
+    <strong>%LOCALAPPDATA%\Visiting Judges Case Manager\Records</strong>, and delete the file
+    <strong>lock.json</strong> (and <strong>lock.json.bak</strong>, if it is there). Start the
+    program again and choose a new PIN; your records are untouched.</p>
+  </details>
+
+  <details>
+    <summary>Where did the program go when I closed it?</summary>
+    <p>To the system tray, by the clock, so that deadline reminders keep arriving. Click its icon
+    to bring it back. To close it completely, right-click the icon and choose
+    <strong>Quit</strong>.</p>
   </details>
 
   <h2>Assignments and pay</h2>
@@ -142,7 +168,7 @@
 
   <details>
     <summary>Where do the explanations and citations come from?</summary>
-    <p>Tap any <strong>ⓘ</strong> for the rule in plain words and the statute behind it. They
+    <p>Click any <strong>ⓘ</strong> for the rule in plain words and the statute behind it. They
     summarize the Government Code, Estates Code, and Property Code as current on January 1,
     2026, the Code of Criminal Procedure as amended through the 2025 session, the Texas Rules of
     Civil Procedure as amended through October 1, 2026, the Texas Rules of Appellate Procedure as
@@ -159,7 +185,7 @@
     pretrial or status conference, a mediation, or something else you name. A setting can run
     several days. By default it counts <strong>court days only</strong>, skipping weekends and
     national holidays; turn that off for a setting that sits straight through. Each setting is in
-    person or remote. To change or delete a setting or a trip, tap <strong>Edit</strong> on it.</p>
+    person or remote. To change or delete a setting or a trip, click <strong>Edit</strong> on it.</p>
   </details>
 
   <details>
@@ -181,17 +207,11 @@
 
   <details>
     <summary>What goes on my calendar?</summary>
-    <p>Choose a calendar in Settings first. Then <strong>Add to calendar</strong> on a setting adds
-    a timed event for each day you sit, and on a trip an all-day event from the day you leave to
-    the day you return. Change or delete the setting or trip in the app and the calendar
-    follows, on that device. Open deadlines are copied to the calendar automatically (see
-    below).</p>
-  </details>
-
-  <details>
-    <summary>What happened to my hearings and travel days?</summary>
-    <p>They carried over. Each hearing is now a court setting, and a hearing&rsquo;s travel day and
-    lodging became a trip of its own, which keeps the calendar event you had already added.</p>
+    <p>Whatever you put there. <strong>Settings &rarr; Calendar &rarr; Save calendar file
+    (.ics)</strong> saves your upcoming court settings (an event for each day you sit), your trips
+    (from the day you leave to the day you return), and your open deadlines. Open the file in
+    Outlook, or import it into Google Calendar. When things change, save a new file and open it
+    again: the same events are updated instead of copied.</p>
   </details>
 
   <h2>Deadlines and reminders</h2>
@@ -199,7 +219,7 @@
   <details>
     <summary>How do I add deadlines?</summary>
     <p>Set the <strong>type of case</strong> on the case (civil, criminal, decedent&rsquo;s estate,
-    guardianship, or trust), then tap <strong>Start deadlines</strong>. Pick what happened, such
+    guardianship, or trust), then click <strong>Start deadlines</strong>. Pick what happened, such
     as letters granted, a judgment signed, or a request for findings filed, and its date. The app
     proposes every deadline that runs from it, with its citation; uncheck any that don&rsquo;t
     apply. You can also add a deadline of your own for anything the rules don&rsquo;t cover.</p>
@@ -245,7 +265,7 @@
 
   <details>
     <summary>A motion to extend was filed. What do I do?</summary>
-    <p>Open the deadline and tap <strong>Motion to extend filed</strong>. The deadline stands, and a
+    <p>Open the deadline and click <strong>Motion to extend filed</strong>. The deadline stands, and a
     to-do to rule on the motion is added. Grant it with the new date and the signed order, or deny
     it; to extend on the court&rsquo;s own motion, use <strong>Extend by order</strong>. Every
     extension is kept with the deadline, and the last one can be undone. The new-trial periods
@@ -254,18 +274,19 @@
 
   <details>
     <summary>When do reminders come, and what do they say?</summary>
-    <p>At 8:00 a.m., 30 days, 7 days, and 1 day before a deadline and on the day itself; change
-    the days on any deadline. Allow notifications when the app asks. To keep case names off the
-    lock screen, a reminder says only that a deadline is due unless you turn on <strong>Show case
-    names in reminders</strong> in Settings. The app&rsquo;s icon shows how many deadlines are
-    overdue. Reminders are scheduled on the device itself; nothing is sent to a server.</p>
+    <p>As Windows notifications at 8:00 a.m., 30 days, 7 days, and 1 day before a deadline and on
+    the day itself; change the days on any deadline. They come while the program is open or in the
+    tray, so close the window rather than quitting. A reminder says only that a deadline is due
+    unless you turn on <strong>Show case names in reminders</strong> in Settings. Hold the pointer
+    over the tray icon to see how many deadlines are overdue. Reminders come from the program on
+    your PC; nothing is sent to a server.</p>
   </details>
 
   <details>
     <summary>Do deadlines go on my calendar?</summary>
-    <p>Yes, once you choose a calendar in Settings. Each open deadline appears as an all-day event,
-    updated when it changes and removed when it is met or waived. Turn off <strong>Copy deadlines
-    to my calendar</strong> in Settings if you would rather not.</p>
+    <p>Yes, through the calendar file in Settings: each open deadline is an all-day event in it.
+    Save a new file after deadlines change, and open it again to bring your calendar up to
+    date.</p>
   </details>
 
   <h2>Bonds</h2>
@@ -279,7 +300,7 @@
     supersedeas; the receivership applicant&rsquo;s bond and the receiver&rsquo;s own bond; attachment,
     garnishment, sequestration, distress-warrant and replevy bonds; security for costs and
     statements of inability; appeals from justice court (civil, eviction, and criminal); and bail.
-    Tap <strong>ⓘ</strong> beside a kind for its rule.</p>
+    Click <strong>ⓘ</strong> beside a kind for its rule.</p>
   </details>
 
   <details>
@@ -337,7 +358,9 @@
   <details>
     <summary>How do I send one, and how do I keep track?</summary>
     <p>Open <strong>Prepare statement</strong> on the case. Review it, then print or save the
-    PDF, or email it with the receipts attached. Mark it submitted when you send it: its entries
+    PDF. <strong>Email</strong> saves the statement and its receipts to a folder, opens the folder,
+    and starts a draft to the assigning judge in your email program; attach the files and send it
+    yourself. Mark it submitted when you send it: its entries
     lock, so nothing is ever claimed twice, and the next statement starts fresh. Mark it
     forwarded for payment and paid as it moves along; Time &amp; Statements shows where every
     statement stands.</p>
@@ -347,57 +370,55 @@
 
   <details>
     <summary>Where is my data? Is there an account?</summary>
-    <p>No account and no server of ours. Everything lives on your device and nothing reaches us.
-    See the <a href="privacy.html">privacy policy</a>, which is short because there is little
-    to disclose.</p>
+    <p>No account and no server of ours. Everything lives in your own Windows account on your PC
+    (<strong>Settings &rarr; Privacy &rarr; Show where my records are kept</strong> opens the folder),
+    and nothing reaches us. See the <a href="privacy.html">privacy policy</a>, which is short
+    because there is little to disclose.</p>
   </details>
 
   <details>
-    <summary>How do I back up, or move to a new iPad?</summary>
-    <p>In Settings, <strong>Back up with documents</strong> writes everything to one file that
-    you save where you like: Files, iCloud Drive, Google Drive, or email. On the new device,
-    choose <strong>Restore from a backup</strong> when the app first opens, or
-    <strong>Restore</strong> in Settings later.
-    Restoring merges with what is already there, so you can also use a backup to bring an
-    iPhone and an iPad into agreement. A device backup or Apple&rsquo;s Quick Start also carries the
-    app&rsquo;s data to a new device.</p>
+    <summary>How do I back up, or move to a new PC?</summary>
+    <p>In Settings, <strong>Back up with documents</strong> writes everything to one .zip file
+    that you save where you like: a folder, a USB drive, or OneDrive. On the new PC, install the
+    program, choose <strong>Restore from a backup</strong> when it first opens (or
+    <strong>Restore</strong> in Settings later), and enter your code again.
+    Restoring merges with what is already there, so you can also use a backup to bring two PCs
+    into agreement.</p>
   </details>
 
   <details>
     <summary>Can I use larger text?</summary>
-    <p>Yes. The app follows the text size set in Settings → Accessibility → Display &amp; Text
-    Size. At larger sizes, the iPad switches to the single-column layout so nothing is
-    squeezed.</p>
+    <p>Yes. The program follows Windows&rsquo; display scale (Settings &rarr; System &rarr; Display
+    &rarr; Scale). At larger sizes, or in a narrow window, it switches to a single-column layout so
+    nothing is squeezed.</p>
   </details>
 
-  <h2>Subscription</h2>
+  <h2>Your code and updates</h2>
 
   <details>
-    <summary>What does it cost?</summary>
-    <p>The download is free. A subscription is <strong>$14.99 for the first year</strong>, then
-    <strong>$49.99 a year</strong>. It renews automatically unless you turn it off at least 24
-    hours before the renewal date. Payment is charged to your Apple Account.</p>
-  </details>
-
-  <details>
-    <summary>Why a subscription?</summary>
-    <p>Because the rules change. The Legislature amends the statutes, the mileage rate changes
-    each January, and presiding judges and their offices change. The subscription pays for
-    keeping the app&rsquo;s rules, rates, directory, and explanations current.</p>
+    <summary>What does it cost, and why do I need a code?</summary>
+    <p>Nothing. The program is free, but adding and changing records takes a personal code from
+    the publisher, good for a year at a time. To ask for one, write to
+    <a href="mailto:jwsimoneaux@gmail.com">jwsimoneaux@gmail.com</a>. Enter it in
+    <strong>Settings &rarr; Windows code &rarr; Enter a code</strong>; Settings then shows whom it is
+    issued to and the date it is good through.</p>
   </details>
 
   <details>
-    <summary>How do I cancel, or restore a purchase on a new device?</summary>
-    <p>Cancel any time in Settings → your name → Subscriptions on your iPhone or iPad. To use
-    your subscription on another device signed into the same Apple Account, tap
-    <strong>Restore purchases</strong> in the app&rsquo;s Settings.</p>
-  </details>
-
-  <details>
-    <summary>What happens if my subscription ends?</summary>
-    <p>Your records stay yours. The app becomes read-only: you can open every case, print past
+    <summary>What happens when my code runs out?</summary>
+    <p>Your records stay yours. The program becomes read-only: you can open every case, print past
     statements, and back up or export everything, but you can&rsquo;t add or change anything until
-    you renew.</p>
+    you enter a new code under <strong>Enter a new code</strong>.</p>
+  </details>
+
+  <details>
+    <summary>How do updates work?</summary>
+    <p>Statutes are amended, the mileage rate changes, and presiding judges and their offices
+    change, so new versions come out. About a minute after the program starts, and every six hours
+    after that, it checks for a newer version and downloads it; the update installs the next time
+    the program restarts. <strong>Settings &rarr; Updates</strong> shows your version, checks at
+    once, offers <strong>Restart and install</strong> when an update is ready, and can turn automatic
+    checks off. Your records, PIN, and code carry over.</p>
   </details>
 
   <div class="contact">
